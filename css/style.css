@@ -23,7 +23,6 @@ footer p {
 }
 
 header {
-    min-width: 400px;
     top: 0;
 }
 
@@ -40,13 +39,15 @@ nav {
 }
 
 nav ul {
-    margin-left: -200px;
+    margin-left: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-grow: 1;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 nav li {
@@ -57,7 +58,6 @@ nav li {
 
 nav li a {
     display: block;
-    padding: 10px;
     color: #fff;
     text-decoration: none;
 }

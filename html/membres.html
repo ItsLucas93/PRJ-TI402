@@ -25,9 +25,55 @@
     </nav>
 </header>
 
-<section>
+<section id="member">
 
+    <div class="memberlist">
+        <h1>Ajoutez vous dans la liste des membres !/h1>
+        <form method="post" name="ajoutmember" action="#" class="box" id="addmember" onsubmit="return false">
+            <fieldset>
+                <legend>Vos informations</legend>
+
+                <label for="nom">Nom</label>
+                <input type="text" min="1" max="100" id="nom" name="nom" value="" placeholder="Votre nom" required>
+
+                <label for="prenom">Prénom</label>
+                <input type="text" min="1" max="100" id="prenom" name="prenom" value="" placeholder="Votre prénom" required>
+
+                <label for="promo">Promotion</label>
+                <input type="text" min="4" max="4" id="promo" name="promo" value="" placeholder="Votre promotion : 20--" required>
+                
+                <label for="Programme">Programme</label>
+                <select id="programme" name="programme" required>
+                    <option value="">-- Veuillez choisir votre programme --</option>
+                    <option value="Usage personnel">Programme grande école (PGE)</option>
+                    <option value="Usage professionel">Programme experts du numérique (PEX)</option>
+                </select>
+
+                <label for="date">Date d'inscrition</label>
+                <input type="date" id="date" name="date" required>
+
+                <input class="btn validate" type="submit" value="S'enregistrer" onclick="generer()">
+            </fieldset>
+        </form>
+
+    </div>
 </section>
+
+<main>
+    <table id="memberlist">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Promotion</th>
+            <th>Programme</th>
+            <th>Date d'inscrition</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</main>
 
 <footer>
     <p>© Symbioz 2018 - 2023 - Tout droits réservés</p>

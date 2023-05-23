@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="script" href="../js/script.js">
+    <script src="../js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Symbioz - Membres</title>
 </head>
@@ -35,19 +35,19 @@
                 <legend>Vos informations</legend>
 
                 <label for="nom">Nom</label>
-                <input type="text" min="1" max="100" id="nom" name="nom" value="" placeholder="Votre nom" required>
+                <input type="text" id="nom" name="nom" value="" placeholder="Votre nom" required>
 
                 <label for="prenom">Prénom</label>
-                <input type="text" min="1" max="100" id="prenom" name="prenom" value="" placeholder="Votre prénom" required>
+                <input type="text" id="prenom" name="prenom" value="" placeholder="Votre prénom" required>
 
                 <label for="promo">Promotion</label>
-                <input type="text" min="4" max="4" id="promo" name="promo" value="" placeholder="Votre promotion : 20--" required>
+                <input type="number" max="2027" id="promo" name="promo" value="" placeholder="Votre promotion : 20--" required>
                 
                 <label for="Programme">Programme</label>
                 <select id="programme" name="programme" required>
                     <option value="">-- Veuillez choisir votre programme --</option>
-                    <option value="Usage personnel">Programme grande école (PGE)</option>
-                    <option value="Usage professionel">Programme experts du numérique (PEX)</option>
+                    <option value="Programme grande école">Programme grande école (PGE)</option>
+                    <option value="Programme experts du numérique">Programme experts du numérique (PEX)</option>
                 </select>
 
                 <label for="alternance">Alternant</label>
@@ -71,6 +71,7 @@
             <th>Prénom</th>
             <th>Promotion</th>
             <th>Programme</th>
+            <th>Alternant</th>
             <th>Date d'inscrition</th>
         </tr>
         </thead>

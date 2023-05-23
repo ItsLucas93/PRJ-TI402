@@ -22,45 +22,50 @@ footer p {
     margin-right: auto;
 }
 
+header {
+    min-width: 400px;
+    top: 0;
+}
+
 nav {
     background-color: #268110;
     color: white;
-    margin-right: 0px;
+    margin-right: 0;
     margin-left: auto;
     list-style-type: none;
     display: flex;
     align-items: center;
-}
-
-.nav-logo img {
-    height: 60px;
-    margin-left: 20px;
-}
-
-.nav-logo, .nav-right {
-    flex: 0 0 200px;
+    width: 100vw;
+    justify-content: center;
 }
 
 nav ul {
-    margin: 0;
+    margin-left: -200px;
     padding: 0;
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-grow: 1;
 }
 
 nav li {
-    padding: 5px;
-    margin: 2vw;
+    margin: 2vh 2vw;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-nav a {
+nav li a {
     display: block;
     padding: 10px;
     color: #fff;
     text-decoration: none;
+}
+
+.nav-logo img {
+    height: 60px;
+    background-color: #268110;
+    margin-left: 30px;
+    padding: 0;
+    justify-content: unset;
 }

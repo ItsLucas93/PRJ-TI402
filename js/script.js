@@ -1,5 +1,21 @@
 function assertRequiredField(monformulaire){
-    return (monformulaire.elements["nom"].value !== "" && monformulaire.elements["date"].value !== "dd/mm/yyyy" && monformulaire.elements["prenom"].value !== "" && monformulaire.elements["promo"].value !== "" && monformulaire.elements["programme"].value !== "");
+    return (monformulaire.elements["nom"].value !== "" && monformulaire.elements["date"].value !== "" && monformulaire.elements["prenom"].value !== "" && monformulaire.elements["promo"].value !== "" && monformulaire.elements["programme"].value !== "");
+}
+
+if (localStorage.getItem('Compteur') === null) {
+    localStorage.setItem('Compteur', '0');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let compteurValue = localStorage.getItem('Compteur');
+    let compteurElement = document.getElementById('footer-compteur');
+    compteurElement.textContent = compteurValue;
+});
+
+function compteur(){
+    let compteurValue = localStorage.getItem('Compteur');
+    compteurValue = parseInt(compteurValue) + 1;
+    localStorage.setItem('Compteur', compteurValue.toString());
 }
 
 function generer(){

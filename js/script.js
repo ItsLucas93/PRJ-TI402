@@ -1,5 +1,5 @@
 function generer(){
-    let monformulaire = document.forms.ajoutmembre;
+    let monformulaire = document.forms.addmember;
 
     if (assertRequiredField(monformulaire)) {
 
@@ -20,6 +20,8 @@ function generer(){
         date.textContent = monformulaire.elements["date"].value;
 
         newLine.append(nom, prenom, promo, prog, alternance, date);
+
+        console.log(prenom);
 
         let memberTab = document.getElementById("memberlist");
 

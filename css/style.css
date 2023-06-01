@@ -6,14 +6,15 @@ body {
 
 footer {
     background-color: #268110;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: 5px;
     position: fixed;
-    bottom: 0px;
     align-items: center;
     justify-content: center;
     display: flex;
+    z-index: 999;
 }
 
 footer p {
@@ -111,4 +112,88 @@ nav li a::after {
 
 nav li a:hover::after {
     transform: scaleX(1);
+}
+
+/** --- Events ** --- **/
+
+section {
+    margin-bottom: 5vh;
+}
+
+.events {
+    position: relative;
+    margin: 1vh 2vw;
+    height: 15vh;
+    width: 90vw;
+    padding: 2vw;
+    display: grid;
+    align-items: center;
+}
+
+.righttext:hover, .lefttext:hover {
+    border: solid 1px black;
+}
+
+.righttext, .lefttext {
+    /** Bloc **/
+    width: 70vw;
+    min-width: 50vw;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+    /** Balises internes **/
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    padding : 2px 20px;
+}
+
+
+.leftimg, .rightimg {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    z-index: 0;
+}
+
+.leftimg > img, .rightimg > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.rightimg {
+    right: -70vw;
+}
+
+.leftimg {
+    left: -25px;
+}
+
+.righttext {
+    right: 10vw;
+}
+
+.lefttext {
+    left: 2vw;
+}
+
+.righttext h2, .lefttext h2 {
+    margin-top: 0;
+    color: #268110;
+}
+
+.righttext h4, .lefttext h4 {
+    margin-bottom: 4px;
+    font-style: italic;
+}
+
+
+.righttext p, .lefttext p {
+    margin-top: 0px;
 }

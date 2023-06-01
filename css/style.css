@@ -120,6 +120,18 @@ section {
     margin-bottom: 5vh;
 }
 
+.line-container {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 175%;
+    background-color: black;
+    z-index: 0;
+}
+
+
 .events {
     position: relative;
     margin: 1vh 2vw;

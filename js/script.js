@@ -1,6 +1,5 @@
 var nosMembres = [];
 
-
 class MEMBER {
     constructor(nom, prenom, promo, prog, alternance, date) {
         this.nom = nom;
@@ -28,15 +27,10 @@ function compteur(){
     localStorage.setItem('Compteur', compteurValue.toString());
 }
 
-/*function check() {
-    let monformulaire = document.forms.addmember;
-    return (monformulaire.elements["minuscule"].checked || monformulaire.elements["majuscule"].checked || monformulaire.elements["chiffre"].checked || monformulaire.elements["symbole"].checked) === true;
-}
-
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector('#addPWD').querySelector("#ajout").addEventListener('click', function () {
+    document.querySelector('#addmber').querySelector("#ajout").addEventListener('click', function () {
         let monformulaire = document.forms.addmember;
-        if (check() === false || (monformulaire.elements["nombrecar"].value === "" || monformulaire.elements["date"].value === "dd/mm/yyyy" || monformulaire.elements["categorie"].value === "" || monformulaire.elements["categorie"].value === "" || monformulaire.elements["siteapp"].value === "")) {
+        if (monformulaire.elements["nom"].value === "" || monformulaire.elements["prenom"].value === "y" || monformulaire.elements["promo"].value === "" || monformulaire.elements["prog"].value === "" || monformulaire.elements["date"].value === "") {
             alert("Champs incomplets. Veuillez remplir les champs.");
         } else {
             ajouter();
@@ -44,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-});*/
+});
 
 function pushMember(nom, prenom, promo, prog, alternance, date) {
     const newMember = new MEMBER(nom, prenom, promo, prog, alternance, date);
@@ -63,9 +57,6 @@ function MemberSaisi(alt) {
     let date = monformulaire.elements["date"].value;
 
     pushMember(nom, prenom, promo, prog, alternance, date);
-
-    console.log("Tableau des Membres :");
-    console.log(nosMembres);
 }
 
 function ajouter(){
@@ -100,5 +91,5 @@ function ajouter(){
         memberTab.appendChild(newLine);
     });
 
-        document.addmember.reset();
+    document.addmember.reset();
 }

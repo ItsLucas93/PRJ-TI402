@@ -88,8 +88,9 @@ function displayMembers() {
         promo.textContent = elemMembers.promo;
         prog.textContent = elemMembers.prog;
         date.textContent = elemMembers.date;
+        
 
-        if (elemMembers.alternance) {
+        if (monformulaire.elements["alternance"].checked) {
             alternance.textContent = "Oui";
         } else {
             alternance.textContent = "Non";
@@ -102,7 +103,14 @@ function displayMembers() {
     });
 }
 
-function ajouter(){
+function ajouter() {
+    let monformulaire = document.forms.addmember;
+
+    if (monformulaire.elements["alternance"].checked) {
+        alternance.textContent = "Oui";
+    } else {
+        alternance.textContent = "Non";
+    }
 
     MemberSaisi(alternance);
 

@@ -1,5 +1,15 @@
-function assertRequiredField(monformulaire){
-    return (monformulaire.elements["nom"].value !== "" && monformulaire.elements["date"].value !== "" && monformulaire.elements["prenom"].value !== "" && monformulaire.elements["promo"].value !== "" && monformulaire.elements["programme"].value !== "");
+var nosMembres = [];
+
+
+class MEMBER {
+    constructor(nom, prenom, promo, prog, alternance, date) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.promo = promo;
+        this.prog = prog;
+        this.alternance = alternance;
+        this.date = date;
+    }
 }
 
 if (localStorage.getItem('Compteur') === null) {
@@ -18,41 +28,83 @@ function compteur(){
     localStorage.setItem('Compteur', compteurValue.toString());
 }
 
-function generer(){
+/*function check() {
     let monformulaire = document.forms.addmember;
+    return (monformulaire.elements["minuscule"].checked || monformulaire.elements["majuscule"].checked || monformulaire.elements["chiffre"].checked || monformulaire.elements["symbole"].checked) === true;
+}
 
-    if (assertRequiredField(monformulaire)) {
-
-        let newLine = document.createElement("tr");
-
-        let nom = document.createElement("td");
-        let prenom = document.createElement("td");
-        let promo = document.createElement("td");
-        let prog = document.createElement("td");
-        let alternance = document.createElement("td")
-        let date = document.createElement("td");
-
-        nom.textContent = monformulaire.elements["nom"].value;
-        prenom.textContent = monformulaire.elements["prenom"].value;
-        promo.textContent = monformulaire.elements["promo"].value;
-        prog.textContent = monformulaire.elements["programme"].value;
-        date.textContent = monformulaire.elements["date"].value;
-
-        if(monformulaire.elements["alternance"].checked){
-            alternance.textContent = "Oui";
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('#addPWD').querySelector("#ajout").addEventListener('click', function () {
+        let monformulaire = document.forms.addmember;
+        if (check() === false || (monformulaire.elements["nombrecar"].value === "" || monformulaire.elements["date"].value === "dd/mm/yyyy" || monformulaire.elements["categorie"].value === "" || monformulaire.elements["categorie"].value === "" || monformulaire.elements["siteapp"].value === "")) {
+            alert("Champs incomplets. Veuillez remplir les champs.");
         } else {
-            alternance.textContent = "Non"
+            ajouter();
         }
 
-        newLine.append(nom, prenom, promo, prog, alternance, date);
+    });
 
-        console.log(prenom);
+});*/
 
-        let memberTab = document.getElementById("memberlist");
+function pushMember(nom, prenom, promo, prog, alternance, date) {
+    const newMember = new MEMBER(nom, prenom, promo, prog, alternance, date);
+    nosMembres.push(newMember);
+}
 
-        memberTab.appendChild(newLine);
+function MemberSaisi(alt) {
 
-    }else {
-        alert("Champs incomplets. Veuillez remplir les champs.");
+    let monformulaire = document.forms.addmember;
+
+    let nom = monformulaire.elements["nom"].value;
+    let prenom = monformulaire.elements["prenom"].value;
+    let promo = monformulaire.elements["promo"].value;
+    let prog = monformulaire.elements["prog"].value;
+    let alternance = alt;
+    let date = monformulaire.elements["date"].value;
+
+    pushMember(nom, prenom, promo, prog, alternance, date);
+
+    console.log("Tableau des Membres :");
+    console.log(nosMembres);
+}
+
+function ajouter(){
+    let monformulaire = document.forms.addmember;
+
+    let newLine = document.createElement("tr");
+
+    let nom = document.createElement("td");
+    let prenom = document.createElement("td");
+    let promo = document.createElement("td");
+    let prog = document.createElement("td");
+    let alternance = document.createElement("td")
+    let date = document.createElement("td");
+
+    /*nom.textContent = monformulaire.elements["nom"].value;
+    prenom.textContent = monformulaire.elements["prenom"].value;
+    promo.textContent = monformulaire.elements["promo"].value;
+    prog.textContent = monformulaire.elements["programme"].value;
+    date.textContent = monformulaire.elements["date"].value;*/
+
+    if(monformulaire.elements["alternance"].checked){
+        alternance.textContent = "Oui";
+    } else {
+        alternance.textContent = "Non"
     }
+
+    MemberSaisi(alternance);
+
+    Array.prototype.forEach.call(nosMembres, (elemMembers) => {
+        nom.textContent = elemMembers.nom;
+        prenom.textContent = elemMembers.prenom;
+        promo.textContent = elemMembers.promo;
+        programme.textContent = elemMembers.prog;
+        date.textContent = elemMembers.date;
+        
+        newLine.append(nom, prenom, promo, prog, alternance, date);
+        let memberTab = document.getElementById("memberlist");
+        memberTab.appendChild(newLine);
+    });
+
+        document.addmember.reset();
 }

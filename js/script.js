@@ -11,15 +11,22 @@ class MEMBER {
     }
 }
 
-if (localStorage.getItem('Compteur') === null) {
-    localStorage.setItem('Compteur', '0');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('Compteur') === null) {
+        localStorage.setItem('Compteur', '0');
+    }
+
     let compteurValue = localStorage.getItem('Compteur');
     let compteurElement = document.getElementById('footer-compteur');
     compteurElement.textContent = compteurValue;
+
+    let storedMembers = localStorage.getItem('nosMembres');
+    if (storedMembers) {
+        nosMembres = JSON.parse(storedMembers);
+        displayMembers();
+    }
 });
+
 
 function compteur(){
     let compteurValue = localStorage.getItem('Compteur');
@@ -43,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function pushMember(nom, prenom, promo, prog, alternance, date) {
     const newMember = new MEMBER(nom, prenom, promo, prog, alternance, date);
     nosMembres.push(newMember);
+    localStorage.setItem('nosMembres', JSON.stringify(nosMembres));
 }
+
 
 function MemberSaisi(alt) {
 
@@ -59,37 +68,45 @@ function MemberSaisi(alt) {
     pushMember(nom, prenom, promo, prog, alternance, date);
 }
 
-function ajouter(){
-    let monformulaire = document.forms.addmember;
 
-    let newLine = document.createElement("tr");
+function displayMembers() {
+    let memberTab = document.getElementById("memberlist");
+    memberTab.innerHTML = '';
 
-    let nom = document.createElement("td");
-    let prenom = document.createElement("td");
-    let promo = document.createElement("td");
-    let prog = document.createElement("td");
-    let alternance = document.createElement("td")
-    let date = document.createElement("td");
+    nosMembres.forEach((elemMembers) => {
+        let newLine = document.createElement("tr");
 
-    if(monformulaire.elements["alternance"].checked){
-        alternance.textContent = "Oui";
-    } else {
-        alternance.textContent = "Non"
-    }
+        let nom = document.createElement("td");
+        let prenom = document.createElement("td");
+        let promo = document.createElement("td");
+        let prog = document.createElement("td");
+        let alternance = document.createElement("td")
+        let date = document.createElement("td");
 
-    MemberSaisi(alternance);
-
-    Array.prototype.forEach.call(nosMembres, (elemMembers) => {
         nom.textContent = elemMembers.nom;
         prenom.textContent = elemMembers.prenom;
         promo.textContent = elemMembers.promo;
         prog.textContent = elemMembers.prog;
         date.textContent = elemMembers.date;
-        
+
+        if (elemMembers.alternance) {
+            alternance.textContent = "Oui";
+        } else {
+            alternance.textContent = "Non";
+        }
+
         newLine.append(nom, prenom, promo, prog, alternance, date);
-        let memberTab = document.getElementById("memberlist");
         memberTab.appendChild(newLine);
+
+        document.addmember.reset();
     });
+}
+
+function ajouter(){
+
+    MemberSaisi(alternance);
 
     document.addmember.reset();
+
+    displayMembers();
 }

@@ -54,7 +54,7 @@ function pushMember(nom, prenom, promo, prog, alternance, date) {
 }
 
 
-function MemberSaisi(alt) {
+function MemberSaisi() {
 
     let monformulaire = document.forms.addmember;
 
@@ -62,14 +62,22 @@ function MemberSaisi(alt) {
     let prenom = monformulaire.elements["prenom"].value;
     let promo = monformulaire.elements["promo"].value;
     let prog = monformulaire.elements["prog"].value;
-    let alternance = alt;
+    let alternance = monformulaire.elements["alternance"].checked;
     let date = monformulaire.elements["date"].value;
+    let textalt = "";
 
-    pushMember(nom, prenom, promo, prog, alternance, date);
+    if (alternance) {
+        textalt = "Oui";   
+    } else {
+        textalt = "Non";
+    }
+
+    pushMember(nom, prenom, promo, prog, textalt, date);
 }
 
 
 function displayMembers() {
+
     let memberTab = document.getElementById("memberlist");
     memberTab.innerHTML = '';
 
@@ -88,13 +96,9 @@ function displayMembers() {
         promo.textContent = elemMembers.promo;
         prog.textContent = elemMembers.prog;
         date.textContent = elemMembers.date;
-        
+        alternance.textContent = elemMembers.alternance;
 
-        if (monformulaire.elements["alternance"].checked) {
-            alternance.textContent = "Oui";
-        } else {
-            alternance.textContent = "Non";
-        }
+        console.log(elemMembers.alternance);
 
         newLine.append(nom, prenom, promo, prog, alternance, date);
         memberTab.appendChild(newLine);
@@ -104,15 +108,8 @@ function displayMembers() {
 }
 
 function ajouter() {
-    let monformulaire = document.forms.addmember;
 
-    if (monformulaire.elements["alternance"].checked) {
-        alternance.textContent = "Oui";
-    } else {
-        alternance.textContent = "Non";
-    }
-
-    MemberSaisi(alternance);
+    MemberSaisi();
 
     document.addmember.reset();
 

@@ -1,10 +1,10 @@
 /** -- À propos -- **/
 
-#listeprojet ol{
+#listeprojet ol {
     list-style-type: upper-alpha;
 }
 
-#bureau>h1{
+#bureau > h1 {
     color: green;
 }
 
@@ -16,13 +16,13 @@
     border-radius: 10px;
     border: #1c1515;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}   
+}
 
 #bureau:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#projets>h1{
+#projets > h1 {
     color: green;
 }
 
@@ -35,13 +35,13 @@
     border-radius: 10px;
     border: #1c1515;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}   
+}
 
 #projets:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#pA>h3{
+#pA > h3 {
     color: green;
 }
 
@@ -55,13 +55,13 @@
     border-radius: 10px;
     border: #1c1515;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}   
+}
 
 #pA:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#pB>h3{
+#pB > h3 {
     color: green;
 }
 
@@ -75,13 +75,13 @@
     border-radius: 10px;
     border: #1c1515;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}   
+}
 
 #pB:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#pC>h3{
+#pC > h3 {
     color: green;
 }
 
@@ -95,7 +95,7 @@
     border-radius: 10px;
     border: #1c1515;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}   
+}
 
 #pC:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);

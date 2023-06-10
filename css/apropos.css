@@ -1,5 +1,9 @@
 /** -- À propos -- **/
 
+#listeprojet ol{
+    list-style-type: upper-alpha;
+}
+
 #bureau>h1{
     color: green;
 }
@@ -37,7 +41,59 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#listeprojet ol{
-    list-style-type: upper-alpha;
+#pA>h3{
+    color: green;
 }
 
+#pA {
+    padding: 15px;
+    position: relative;
+    margin: 15px;
+    margin-left: -3vh;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}   
+
+#pA:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#pB>h3{
+    color: green;
+}
+
+#pB {
+    padding: 15px;
+    position: relative;
+    margin: 15px;
+    margin-left: -3vh;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}   
+
+#pB:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#pC>h3{
+    color: green;
+}
+
+#pC {
+    padding: 15px;
+    position: relative;
+    margin: 15px;
+    margin-left: -3vh;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}   
+
+#pC:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}

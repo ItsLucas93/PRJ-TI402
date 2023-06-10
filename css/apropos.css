@@ -1,1 +1,43 @@
 /** -- À propos -- **/
+
+#bureau>h1{
+    color: green;
+}
+
+#bureau {
+    padding: 15px;
+    position: relative;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}   
+
+#bureau:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#projets>h1{
+    color: green;
+}
+
+#projets {
+    padding: 15px;
+    position: relative;
+    margin: 20px;
+    margin-bottom: 8vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}   
+
+#projets:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#listeprojet ol{
+    list-style-type: upper-alpha;
+}
+

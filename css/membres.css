@@ -1,9 +1,102 @@
 /** -- Membres -- **/
 
-#memberlist * {
-    position: relative;
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
-#memberlist > tr {
+#member, main {
+    position: relative;
+    margin: 10px auto auto;
+    padding: 10px;
+    width: 90vw;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 
+#member:hover, main:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    margin-bottom: 7vh;
+    text-align: center;
+    justify-content: space-between;
+}
+
+fieldset {
+    align-items: baseline;
+    border-radius: 5px;
+    border: 2px dashed #268110;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+table {
+    margin: 2vh;
+    border-collapse: collapse;
+    border: 1px solid transparent;
+}
+
+td {
+    border: 1px solid #268110;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 80%;
+}
+
+thead th {
+    font-weight: bold;
+    border: 2px solid #268110;
+    font-size: 95%;
+    width: 80vw;
+}
+
+.c1 {
+    background-color: #20ff7a;
+    color: black;
+}
+
+
+.c2 {
+    background-color: #20ff7a;
+    color: black;
+}
+
+.c3 {
+    background-color: #18bb59;
+    color: white;
+}
+
+
+.c4 {
+    background-color: #228812;
+    color: white;
+}
+
+
+.c5 {
+    background-color: #1b690e;
+    color: white;
+}
+
+
+.c6 {
+    background-color: #195e0d;
+    color: white;
+}
+
+tr:hover td {
+    background-color: #fff8f8;
+    color: black;
 }

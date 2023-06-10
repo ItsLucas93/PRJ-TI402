@@ -39,28 +39,37 @@
             <fieldset>
                 <legend>Vos informations</legend>
 
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" value="" placeholder="Votre nom">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" value="" placeholder="Votre nom"><br>
 
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" value="" placeholder="Votre prénom">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" value="" placeholder="Votre prénom"><br>
 
-                <label for="promo">Promotion</label>
-                <input type="number" id="promo" name="promo" value="" placeholder="Votre promotion : 20--">
+            </fieldset>
+            <fieldset>
+                <legend>Votre programme</legend>
+                <label for="promo">Promotion :</label>
+                <input type="number" id="promo" name="promo" value="" placeholder="Votre promotion : 20--"><br>
                 
-                <label for="prog">Programme</label>
+                <label for="prog">Programme :</label>
                 <select id="prog" name="prog">
                     <option value="">-- Veuillez choisir votre programme --</option>
                     <option value="Programme grande école">Programme grande école (PGE)</option>
                     <option value="Programme experts du numérique">Programme experts du numérique (PEX)</option>
-                </select>
+                </select><br>
 
-                <label for="alternance">Alternant</label>
-                <input type="checkbox" id="alternance" name="alternance">
+                <label for="alternance">Alternant :</label>
+                <input type="checkbox" id="alternance" name="alternance"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Votre inscription chez Symbioz</legend>
+                <label for="date">Date d'inscription :</label>
+                <input type="date" id="date" name="date"><br>
+            </fieldset>
+            </fieldset>
 
-                <label for="date">Date d'inscription</label>
-                <input type="date" id="date" name="date">
-
+            <fieldset>
+                <legend>Ajoutez-vous à la liste de membre</legend>
                 <input id="ajout" class="btn validate" type="submit" value="S'enregistrer" onclick="compteur()">
             </fieldset>
         </form>

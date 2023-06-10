@@ -82,7 +82,12 @@ function displayMembers() {
         date.textContent = elemMembers.date;
         alternance.textContent = elemMembers.alternance;
 
-        console.log(elemMembers.alternance);
+        nom.classList.add("c1");
+        prenom.classList.add("c2");
+        promo.classList.add("c3");
+        prog.classList.add("c4");
+        alternance.classList.add("c5");
+        date.classList.add("c6");
 
         newLine.append(nom, prenom, promo, prog, alternance, date);
         memberTab.appendChild(newLine);

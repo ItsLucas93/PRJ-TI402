@@ -25,20 +25,55 @@
 </header>
 
 <div class="banner">
-    <img src="../img/banner.jpeg" alt="Bannière">
+    <img id="banner-image" src="../img/banner.jpeg" alt="Bannière">
     <div class="banner-text">
         <h1>Symbioz</h1>
         <h2>Pour plus de Symbioz sur le campus !</h2>
     </div>
+    <div id="progress-bar"></div>
 </div>
 
-<section>
 
+<section>
 </section>
 
 <footer>
     <p id="footer-text">© Symbioz 2018 - 2023 - Tout droits réservés | Nombre d'adhérents : <span id="footer-compteur"></span></p>
 </footer>
+
+
+<script>
+    var images = ["../img/banner.jpeg", "../img/image2.png", "../img/eventBDE09062023.jpg", "../img/image1.png"];
+    var currentImage = 0;
+
+    function changeImage() {
+        currentImage = (currentImage + 1) % images.length;
+        var bannerImage = document.getElementById('banner-image');
+        bannerImage.src = images[currentImage];
+
+        // Reset the progress bar
+        var progressBar = document.getElementById('progress-bar');
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '0';
+
+        // Start the progress bar
+        setTimeout(function() {
+            progressBar.style.transition = 'width 5s linear';
+            progressBar.style.width = '100%';
+        }, 100);
+    }
+
+    // Initiate the progress bar
+    var progressBar = document.getElementById('progress-bar');
+    progressBar.style.backgroundColor = 'green';
+    progressBar.style.width = '100%';
+    progressBar.style.transition = 'width 5s linear';
+
+    // Change the image every 5 seconds
+    setInterval(changeImage, 5000);
+
+
+</script>
 
 </body>
 </html>

@@ -1,7 +1,14 @@
 /** -- Membres -- **/
 
 h1 {
+    margin-top: 4vh;
     font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }

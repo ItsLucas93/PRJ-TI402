@@ -1,1 +1,19 @@
 /** -- À propos -- **/
+
+#apropos {
+    padding: 15px;
+    position: relative;
+    margin: 20px;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#apropos:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#apropos > h2 {
+    color: #268110;
+}

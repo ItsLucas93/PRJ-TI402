@@ -1,11 +1,7 @@
 /** -- À propos -- **/
 
-#listeprojet ol {
-    list-style-type: upper-alpha;
-}
-
 #bureau > h1 {
-    color: green;
+    color: #268110;
 }
 
 #bureau {
@@ -33,8 +29,28 @@
     font-weight: bold;
 }
 
+#listeprojet ol {
+    list-style-type: upper-alpha;
+}
+
+/* ::marker pour la modification du style des puces */
+#listeprojet ol ::marker {
+    color: #268110;
+    font-weight: bold;
+    font-size: 1.17em; /* Taille h3 */
+}
+
+#listeprojet ::marker {
+    font-weight: bold;
+    font-size: 1.5em; /* Taille h2 */
+}
+
+h3 {
+    color: #268110;
+}
+
 #projets > h1 {
-    color: green;
+    color: #268110;
 }
 
 #projets {
@@ -50,10 +66,6 @@
 
 #projets:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-#pA > h3 {
-    color: green;
 }
 
 #pA {
@@ -72,9 +84,6 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#pB > h3 {
-    color: green;
-}
 
 #pB {
     padding: 15px;
@@ -92,9 +101,6 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#pC > h3 {
-    color: green;
-}
 
 #pC {
     padding: 15px;

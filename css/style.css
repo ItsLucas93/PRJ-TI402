@@ -1,6 +1,12 @@
 /** Main (navbar, footer) **/
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat-VariableFont_wght.ttf");
+}
+
 body {
-    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-family: Montserrat, 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }

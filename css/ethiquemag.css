@@ -47,6 +47,10 @@ div.shelf {
     justify-content: center;
 }
 
+div.container > a {
+    text-decoration: none;
+}
+
 div.container {
     margin: 3vh 5vw 3vh 5vw;
     position: relative;
@@ -57,8 +61,14 @@ div.container {
 
     display: grid;
     width: 210px;
+    height: 420px;
 }
 
+div.container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    top: -10px;
+    left: -10px;
+}
 div.article-page-cover {
     height: 300px;
     width: 210px;
@@ -74,6 +84,14 @@ div.article-page-cover > img {
 
 div.article-description {
     text-align: center;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 div.article-description > h4 {
@@ -85,4 +103,6 @@ div.article-description > p {
     margin: 0;
     padding: 1vh;
     font-style: italic;
+    color: grey;
+    bottom: 0;
 }

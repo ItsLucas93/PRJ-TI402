@@ -20,62 +20,66 @@ Le rapport se présente en racine du projet.
 ```
 ./
 ├── css
-│    ├── accueil.css
-│    ├── apropos.css
-│    ├── association.css
-│    ├── ethiquemag.css
-│    ├── events.css
-│    ├── membres.css
-│    └── style.css
+│        ├── accueil.css
+│        ├── apropos.css
+│        ├── association.css
+│        ├── ethiquemag.css
+│        ├── events.css
+│        ├── membres.css
+│        └── style.css
+├── font
+│        ├── Montserrat-Italic-VariableFont_wght.ttf
+│        ├── Montserrat-Light.otf
+│        └── Montserrat-VariableFont_wght.ttf
 ├── html
-│    ├── accueil.html
-│    ├── apropos.html
-│    ├── association.html
-│    ├── ethiquemag.html
-│    ├── events.html
-│    └── membres.html
+│        ├── accueil.html
+│        ├── apropos.html
+│        ├── association.html
+│        ├── ethiquemag.html
+│        ├── events.html
+│        └── membres.html
 ├── img
-│    ├── Cohésion Avril 2023.jpg
-│    ├── EthiqueMagBanner.png
-│    ├── EthiqueMagCover
-│    │   ├── 11.-Mars-2018.png
-│    │   ├── 2.-Octobre-2015.png
-│    │   ├── 3.-Novembre-2015.png
-│    │   ├── 4.-Janvier-2016.png
-│    │   ├── 5.-Mars-2016.png
-│    │   ├── 6.-Novembre-2016.png
-│    │   ├── 7.-Février-2017.png
-│    │   ├── 8.-Avril-2017.png
-│    │   ├── 8.-Décembre-2017.png
-│    │   ├── 9.-Recyclage-livret.png
-│    │   └── novembre-2021-mag.png
-│    ├── Fresque Du Climat.png
-│    ├── adele.png
-│    ├── aurelien.png
-│    ├── banner.jpeg
-│    ├── eventBDE09062023.jpg
-│    ├── favicon.ico
-│    ├── image1.png
-│    ├── image2.png
-│    ├── lisa.png
-│    ├── logo.png
-│    └── lucas.png
-├── js
-│    ├── accueil.js
-│    ├── member.js
-│    └── script.js
-├── pdf
-│    ├── 11.-Mars-2018.pdf
-│    ├── 2.-Octobre-2015.pdf
-│    ├── 3.-Novembre-2015.pdf
-│    ├── 4.-Janvier-2016.pdf
-│    ├── 5.-Mars-2016.pdf
-│    ├── 6.-Novembre-2016.pdf
-│    ├── 7.-Février-2017.pdf
-│    ├── 8.-Avril-2017.pdf
-│    ├── 8.-Décembre-2017.pdf
-│    ├── 9.-Recyclage-livret.pdf
-│    └── novembre-2021-mag.pdf
+│        ├── EthiqueMagBanner.png
+│        ├── EthiqueMagCover
+│        │       ├── Avril-2017.png
+│        │       ├── Décembre-2017.png
+│        │       ├── Février-2017.png
+│        │       ├── Janvier-2016.png
+│        │       ├── Mars-2016.png
+│        │       ├── Mars-2018.png
+│        │       ├── Novembre-2015.png
+│        │       ├── Novembre-2016.png
+│        │       ├── Octobre-2015.png
+│        │       ├── Recyclage-livret.png
+│        │       └── novembre-2021-mag.png
+│        ├── Fresque Du Climat.png
+│        ├── adele.png
+│        ├── aurelien.png
+│        ├── banner.jpeg
+│        ├── cohesionAvril2023.jpg
+│        ├── eventBDE09062023.jpg
+│        ├── favicon.ico
+│        ├── image1.png
+│        ├── image2.png
+│        ├── lisa.png
+│        ├── logo.png
+│        └── lucas.png
+│── js
+│        ├── accueil.js
+│        ├── member.js
+│        └── script.js
+│── pdf
+│        ├── Avril-2017.pdf
+│        ├── Décembre-2017.pdf
+│        ├── Février-2017.pdf
+│        ├── Janvier-2016.pdf
+│        ├── Mars-2016.pdf
+│        ├── Mars-2018.pdf
+│        ├── Novembre-2015.pdf
+│        ├── Novembre-2016.pdf
+│        ├── Octobre-2015.pdf
+│        ├── Recyclage-livret.pdf
+│        └── novembre-2021-mag.pdf
 ├── PRJ-TI402 - KOCOGLU Lucas BAUDET Antoine.pdf
 └── readMe.md
 ```

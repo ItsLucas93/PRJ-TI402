@@ -1,5 +1,5 @@
 // Permet l'affichage et le bon fonctionnement du compteur en base de page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (localStorage.getItem('Compteur') === null) {
         localStorage.setItem('Compteur', '0');
     }
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     compteur();
 });
 
-function compteur(){
+function compteur() {
     let nosMembres = localStorage.getItem('nosMembres');
     let compteurValue;
 

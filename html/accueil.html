@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/accueil.css">
 
@@ -9,16 +11,20 @@
 
     <script src="../js/accueil.js"></script>
     <script src="../js/script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Symbioz - Accueil</title>
 </head>
 <body>
 
+<!-- Barre de navigation -->
 <header>
     <nav>
+        <!-- Partie Gauche - Logo -->
         <div class="nav-logo">
             <a href="accueil.html"><img src="../img/logo.png" alt="Logo"></a>
         </div>
+
+        <!-- Partie Droite - Pages -->
         <ul>
             <li class="current"><a href="accueil.html">Accueil</a></li>
             <li><a href="events.html">Events</a></li>
@@ -29,7 +35,9 @@
         </ul>
     </nav>
 </header>
+<!-- Fin de la barre navigation -->
 
+<!-- Carrousel -->
 <div class="banner">
     <img id="banner-image" src="../img/banner.jpeg" alt="Bannière">
     <div class="banner-text">
@@ -39,8 +47,11 @@
     <div id="progress-bar"></div>
 </div>
 
+<!-- Premier bloc - Description de l'association -->
 <section id="description">
-    <h2>Site Vitrine de Symbioz :<br></h2>
+    <!-- Titre du bloc -->
+    <h2>Site Vitrine de Symbioz :</h2>
+    <!-- Corps du bloc -->
     <p>
         Association développement durable à l'EFREI Paris Panthéon Assas Université 🌿🍃 <br>
         Symbioz est l'association de développement durable du campus, dont le but est de sensibiliser les étudiants sur ses enjeux via diverses activités, en dehors de toute considération politique et grâce au soutien d'entreprises et d'Efrei Paris . <br>
@@ -48,8 +59,11 @@
     </p>
 </section>
 
+<!-- Deuxième bloc - Description du site internet -->
 <section id="presentation">
+    <!-- Titre du bloc -->
     <h2>Ici vous pouvez :</h2>
+    <!-- Corps du bloc -->
     <ul>
         <li>Allez voir tous nos évènements dans <a href="events.html">évenements</a>, soyez nombreux à venir, Symbioz et l'environnement compte sur vous !<br></li>
         <li>N'oubliez pas de nous rejoindre et de devenir <a href="membres.html">membre</a> de l'association, venez rejoindre tous les autres en quelques secondes seulement !<br></li>
@@ -59,6 +73,7 @@
     </ul>
 </section>
 
+<!-- Footer -->
 <footer>
     <p id="footer-text">© Symbioz 2018 - 2023 - Tout droits réservés | Nombre d'adhérents : <span id="footer-compteur"></span> | <a href="apropos.html">À propos du site</a></p>
 </footer>

@@ -1,31 +1,35 @@
+//Ce script est utilisé pour faire le carrousel de la page d'accueil
+
 document.addEventListener("DOMContentLoaded", function () {
+    //charge les images
     const images = ["../img/banner.jpeg", "../img/image2.png", "../img/eventBDE09062023.jpg", "../img/image1.png"];
     var currentImage = 0;
 
+    //fonction qui permet de changer les images
     function changeImage() {
         currentImage = (currentImage + 1) % images.length;
         const bannerImage = document.getElementById('banner-image');
         bannerImage.src = images[currentImage];
 
-        // Reset the progress bar
+        // Reset la barre de progression
         const progressBar = document.getElementById('progress-bar');
         progressBar.style.transition = 'none';
         progressBar.style.width = '0';
 
-        // Start the progress bar
+        // Démarre la barre de progression
         setTimeout(function() {
             progressBar.style.transition = 'width 5s linear';
             progressBar.style.width = '100%';
         }, 100);
     }
 
-    // Initiate the progress bar
+    // Initialise la barre de progression
     const progressBar = document.getElementById('progress-bar');
     progressBar.style.backgroundColor = 'green';
     progressBar.style.width = '100%';
     progressBar.style.transition = 'width 5s linear';
 
-    // Change the image every 5 seconds
+    // Change l'image toute les 5 secondes
     setInterval(changeImage, 5000);
 
     }

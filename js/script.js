@@ -1,3 +1,4 @@
+//permet l'affichage et le bon fonctionnement du compteur en base de page
 document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('Compteur') === null) {
         localStorage.setItem('Compteur', '0');

@@ -32,3 +32,57 @@
 .banner-text > h2 {
     margin-top: 0;
 }
+
+h3, h4 {
+    color: #268110;
+    text-align: center;
+}
+
+section {
+    margin: auto auto 8vh auto;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.container {
+    margin: 3vh 5vw 3vh 5vw;
+    position: relative;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    border: #1c1515;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+    display: grid;
+    width: 210px;
+}
+
+div.article-page-cover {
+    height: 300px;
+    width: 210px;
+    align-items: center;
+}
+
+div.article-page-cover > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+div.article-description {
+    text-align: center;
+}
+
+div.article-description > h4 {
+    margin: 0;
+    padding: 1vh;
+}
+
+div.article-description > p {
+    margin: 0;
+    padding: 1vh;
+    font-style: italic;
+}

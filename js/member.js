@@ -1,3 +1,4 @@
+//tableau où l'on va stocker toutes les informations de la page membres
 var nosMembres = [];
 
 class MEMBER {
@@ -11,6 +12,7 @@ class MEMBER {
     }
 }
 
+//verifie que tous les champs du formulaires sont remplis
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('#addmber').querySelector("#ajout").addEventListener('click', function () {
         let monformulaire = document.forms.addmember;
@@ -25,19 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let storedMembers = localStorage.getItem('nosMembres');
     if (storedMembers) {
-        nosMembres = JSON.parse(storedMembers);
+        nosMembres = JSON.parse(storedMembers); //recupere le tableau stocké en local
         displayMembers();
     }
 
 });
 
+// Ajoute les informations dans le tableau nosMembres 
 function pushMember(nom, prenom, promo, prog, alternance, date) {
     const newMember = new MEMBER(nom, prenom, promo, prog, alternance, date);
     nosMembres.push(newMember);
-    localStorage.setItem('nosMembres', JSON.stringify(nosMembres));
+    localStorage.setItem('nosMembres', JSON.stringify(nosMembres)); //permet le stockage en local
 }
 
-
+// Récupère les informations saisies dans le formulaire et les ajoute aux membres
 function MemberSaisi() {
 
     let monformulaire = document.forms.addmember;
@@ -59,7 +62,7 @@ function MemberSaisi() {
     pushMember(nom, prenom, promo, prog, textalt, date);
 }
 
-
+// Affiche les membres dans le tableau HTML
 function displayMembers() {
 
     let memberTab = document.getElementById("memberlist");
@@ -96,11 +99,12 @@ function displayMembers() {
     });
 }
 
+// Fonction appelée lors du clic sur le bouton "Ajouter"
 function ajouter() {
 
     MemberSaisi();
 
-    document.addmember.reset();
+    document.addmember.reset(); //vide le formulaire
 
     displayMembers();
 }

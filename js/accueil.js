@@ -1,11 +1,10 @@
-//Ce script est utilisé pour faire le carrousel de la page d'accueil
-
+// Ce script est utilisé pour faire le carrousel de la page d'accueil
 document.addEventListener("DOMContentLoaded", function () {
-    //charge les images
+    // Liste des images
     const images = ["../img/banner.jpeg", "../img/image2.png", "../img/eventBDE09062023.jpg", "../img/image1.png"];
     var currentImage = 0;
 
-    //fonction qui permet de changer les images
+    // Fonction qui permet de changer les images
     function changeImage() {
         currentImage = (currentImage + 1) % images.length;
         const bannerImage = document.getElementById('banner-image');
